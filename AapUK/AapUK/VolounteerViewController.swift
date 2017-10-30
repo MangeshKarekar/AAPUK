@@ -10,6 +10,15 @@ import UIKit
 
 class VolounteerViewController: UIViewController {
 
+   // let sectionTitles = ["Address","Passport", "How would you like to contribute ?"]
+    let sections = ["Address": ["Name","Address","Email","Phone"],
+                    "Passport": ["Indian","Non Indian"],
+                    "How would you like to contribute ?": ["Event","Video for social media","Call campaign","fund raise","Paper design"]]
+    var sectionTitles = [String]()
+//    let address = ["Name","Address","Email","Phone"]
+//    let passport = ["Indian","Non Indian"]
+//    let contribution = ["Event","Video for social media","Call campaign","fund raise","Paper design"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

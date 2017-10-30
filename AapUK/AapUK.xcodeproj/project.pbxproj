@@ -15,6 +15,7 @@
 		9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B531FA7754F008592DB /* CustomButtons.swift */; };
 		9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */; };
 		9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B571FA793AE008592DB /* SupporterViewController.swift */; };
+		9EAA0B5A1FA794BE008592DB /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B591FA794BE008592DB /* AddressTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9EAA0B531FA7754F008592DB /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolounteerViewController.swift; sourceTree = "<group>"; };
 		9EAA0B571FA793AE008592DB /* SupporterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterViewController.swift; sourceTree = "<group>"; };
+		9EAA0B591FA794BE008592DB /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				9E253E391FA130EC0007BA1D /* AppDelegate.swift */,
 				9EAA0B531FA7754F008592DB /* CustomButtons.swift */,
+				9EAA0B591FA794BE008592DB /* AddressTableViewCell.swift */,
 				9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */,
 				9EAA0B571FA793AE008592DB /* SupporterViewController.swift */,
 				9E253E3B1FA130EC0007BA1D /* ViewController.swift */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAA0B5A1FA794BE008592DB /* AddressTableViewCell.swift in Sources */,
 				9E253E3C1FA130EC0007BA1D /* ViewController.swift in Sources */,
 				9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */,
 				9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */,
