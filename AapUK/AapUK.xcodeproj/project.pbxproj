@@ -12,6 +12,9 @@
 		9E253E3F1FA130EC0007BA1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E3D1FA130EC0007BA1D /* Main.storyboard */; };
 		9E253E411FA130EC0007BA1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E401FA130EC0007BA1D /* Assets.xcassets */; };
 		9E253E441FA130EC0007BA1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E421FA130EC0007BA1D /* LaunchScreen.storyboard */; };
+		9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B531FA7754F008592DB /* CustomButtons.swift */; };
+		9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */; };
+		9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B571FA793AE008592DB /* SupporterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		9E253E401FA130EC0007BA1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E253E431FA130EC0007BA1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E253E451FA130EC0007BA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EAA0B531FA7754F008592DB /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolounteerViewController.swift; sourceTree = "<group>"; };
+		9EAA0B571FA793AE008592DB /* SupporterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				9E253E391FA130EC0007BA1D /* AppDelegate.swift */,
+				9EAA0B531FA7754F008592DB /* CustomButtons.swift */,
+				9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */,
+				9EAA0B571FA793AE008592DB /* SupporterViewController.swift */,
 				9E253E3B1FA130EC0007BA1D /* ViewController.swift */,
 				9E253E3D1FA130EC0007BA1D /* Main.storyboard */,
 				9E253E401FA130EC0007BA1D /* Assets.xcassets */,
@@ -137,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E253E3C1FA130EC0007BA1D /* ViewController.swift in Sources */,
+				9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */,
+				9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */,
 				9E253E3A1FA130EC0007BA1D /* AppDelegate.swift in Sources */,
+				9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

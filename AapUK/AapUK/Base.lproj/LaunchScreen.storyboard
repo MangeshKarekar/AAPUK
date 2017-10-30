@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AAP-logo-Eng" translatesAutoresizingMaskIntoConstraints="NO" id="lJm-EL-4kX">
-                                <rect key="frame" x="137.5" y="303.5" width="100" height="80"/>
+                                <rect key="frame" x="137.5" y="293.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="iw7-PG-j5N"/>
-                                    <constraint firstAttribute="height" constant="80" id="rKy-c2-tbG"/>
+                                    <constraint firstAttribute="height" constant="100" id="rKy-c2-tbG"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AAP-logo-Eng" width="129" height="100"/>
+        <image name="AAP-logo-Eng" width="960" height="960"/>
     </resources>
 </document>
