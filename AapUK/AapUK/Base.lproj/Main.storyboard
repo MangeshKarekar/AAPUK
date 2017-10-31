@@ -51,6 +51,9 @@
                                 <state key="normal" title="Become a volunteer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SGK-4A-A61" kind="show" id="6xh-r1-NLm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnO-Ae-iKe" customClass="CurvedButton" customModule="AapUK" customModuleProvider="target">
                                 <rect key="frame" x="112" y="525.5" width="150" height="70"/>
@@ -127,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="32" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addreddCell" id="REK-kp-lXg" customClass="AddressTableViewCell" customModule="AapUK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addressCell" id="REK-kp-lXg" customClass="AddressTableViewCell" customModule="AapUK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="REK-kp-lXg" id="iMf-qE-55W">
@@ -160,6 +163,23 @@
                                             <outlet property="textField" destination="d1w-jV-K07" id="oKD-L5-Te0"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Xfx-Sq-9O4" style="IBUITableViewCellStyleDefault" id="ATO-j5-JTH">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ATO-j5-JTH" id="wGr-MM-jGC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xfx-Sq-9O4">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="SGK-4A-A61" id="nkS-2f-EP5"/>
@@ -176,6 +196,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gOx-kK-PPX"/>
                     </view>
+                    <connections>
+                        <outlet property="volounteerTable" destination="AD8-wD-5ZN" id="VUL-w0-0sO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h79-Z3-QNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,4 +227,7 @@
         <image name="AAP-logo-Eng" width="960" height="960"/>
         <image name="India-Flag-PNG-File" width="800" height="634"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6xh-r1-NLm"/>
+    </inferredMetricsTieBreakers>
 </document>

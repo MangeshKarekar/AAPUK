@@ -13,6 +13,13 @@ enum KeyboardType{
     case alphabetic
 }
 
+protocol AddressTableViewCellActions: class {
+    
+    func addressTableViewCell(didPressDoneWithLabel Label:String?, text:String?)
+    func addressTableViewCell(didPressNextWithLabel Label:String?, text:String?)
+    
+}
+
 class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
@@ -26,11 +33,14 @@ class AddressTableViewCell: UITableViewCell {
         }
     }
     
+    weak var delegate: AddressTableViewCellActions?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 50))
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
-        toolBar.items = [doneButton]
+        let nextButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(nextTapped))
+        toolBar.items = [doneButton,nextButton]
         textField.inputAccessoryView = toolBar
         // Initialization code
     }
@@ -43,6 +53,12 @@ class AddressTableViewCell: UITableViewCell {
     
     @objc func doneTapped(){
         textField.resignFirstResponder()
+        delegate?.addressTableViewCell(didPressDoneWithLabel: label.text, text: textField.text)
+    }
+    
+    @objc func nextTapped(){
+        textField.resignFirstResponder()
+        delegate?.addressTableViewCell(didPressNextWithLabel: label.text, text: textField.text)
     }
     
     func setKeyboardType(forType type: KeyboardType){
