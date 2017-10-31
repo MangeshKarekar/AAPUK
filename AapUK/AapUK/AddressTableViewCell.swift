@@ -39,7 +39,7 @@ class AddressTableViewCell: UITableViewCell {
         super.awakeFromNib()
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 50))
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
-        let nextButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(nextTapped))
+        let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextTapped))
         toolBar.items = [doneButton,nextButton]
         textField.inputAccessoryView = toolBar
         // Initialization code
@@ -64,7 +64,7 @@ class AddressTableViewCell: UITableViewCell {
     func setKeyboardType(forType type: KeyboardType){
         switch type {
         case .numeric:
-            textField.keyboardType = UIKeyboardType.namePhonePad
+            textField.keyboardType = UIKeyboardType.decimalPad
         default:
             textField.keyboardType = UIKeyboardType.alphabet
         }
