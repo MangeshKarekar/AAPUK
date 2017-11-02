@@ -12,6 +12,7 @@
 		9E253E3F1FA130EC0007BA1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E3D1FA130EC0007BA1D /* Main.storyboard */; };
 		9E253E411FA130EC0007BA1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E401FA130EC0007BA1D /* Assets.xcassets */; };
 		9E253E441FA130EC0007BA1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E421FA130EC0007BA1D /* LaunchScreen.storyboard */; };
+		9E2E789C1FAB74270014ECF0 /* Supporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E789B1FAB74270014ECF0 /* Supporter.swift */; };
 		9E7E23351FA8A2DB00F82341 /* Volounteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7E23341FA8A2DB00F82341 /* Volounteer.swift */; };
 		9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B531FA7754F008592DB /* CustomButtons.swift */; };
 		9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */; };
@@ -27,6 +28,7 @@
 		9E253E401FA130EC0007BA1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E253E431FA130EC0007BA1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E253E451FA130EC0007BA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2E789B1FAB74270014ECF0 /* Supporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporter.swift; sourceTree = "<group>"; };
 		9E7E23341FA8A2DB00F82341 /* Volounteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volounteer.swift; sourceTree = "<group>"; };
 		9EAA0B531FA7754F008592DB /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolounteerViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				9E7E23341FA8A2DB00F82341 /* Volounteer.swift */,
+				9E2E789B1FAB74270014ECF0 /* Supporter.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */,
 				9E253E3A1FA130EC0007BA1D /* AppDelegate.swift in Sources */,
 				9E7E23351FA8A2DB00F82341 /* Volounteer.swift in Sources */,
+				9E2E789C1FAB74270014ECF0 /* Supporter.swift in Sources */,
 				9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
