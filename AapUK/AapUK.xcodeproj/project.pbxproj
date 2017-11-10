@@ -16,6 +16,7 @@
 		9E253E441FA130EC0007BA1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E253E421FA130EC0007BA1D /* LaunchScreen.storyboard */; };
 		9E2E789C1FAB74270014ECF0 /* Supporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E789B1FAB74270014ECF0 /* Supporter.swift */; };
 		9E37C5C91FB5AA3D00950CAD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37C5C81FB5AA3D00950CAD /* NewsTableViewCell.swift */; };
+		9E37C5CD1FB5D35700950CAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E37C5CC1FB5D35700950CAD /* GoogleService-Info.plist */; };
 		9E7E23351FA8A2DB00F82341 /* Volounteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7E23341FA8A2DB00F82341 /* Volounteer.swift */; };
 		9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B531FA7754F008592DB /* CustomButtons.swift */; };
 		9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */; };
@@ -37,6 +38,7 @@
 		9E253E451FA130EC0007BA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E2E789B1FAB74270014ECF0 /* Supporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporter.swift; sourceTree = "<group>"; };
 		9E37C5C81FB5AA3D00950CAD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		9E37C5CC1FB5D35700950CAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E7E23341FA8A2DB00F82341 /* Volounteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volounteer.swift; sourceTree = "<group>"; };
 		9EAA0B531FA7754F008592DB /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolounteerViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				9E253E401FA130EC0007BA1D /* Assets.xcassets */,
 				9E253E421FA130EC0007BA1D /* LaunchScreen.storyboard */,
 				9E253E451FA130EC0007BA1D /* Info.plist */,
+				9E37C5CC1FB5D35700950CAD /* GoogleService-Info.plist */,
 			);
 			path = AapUK;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E253E441FA130EC0007BA1D /* LaunchScreen.storyboard in Resources */,
+				9E37C5CD1FB5D35700950CAD /* GoogleService-Info.plist in Resources */,
 				9E253E411FA130EC0007BA1D /* Assets.xcassets in Resources */,
 				9E253E3F1FA130EC0007BA1D /* Main.storyboard in Resources */,
 			);
