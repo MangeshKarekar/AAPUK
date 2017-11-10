@@ -10,9 +10,9 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var previewLabel: UILabel!
+    @IBOutlet var newsImageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var previewLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
