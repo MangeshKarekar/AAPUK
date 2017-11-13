@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nA-KC-eVN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nm0-l3-b9l">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="width" constant="150" id="f21-dx-nhd"/>
                                     <constraint firstAttribute="height" constant="70" id="jKY-hn-0WY"/>
                                 </constraints>
-                                <state key="normal" title="Become a volunteer">
+                                <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -63,11 +63,11 @@
                                     <constraint firstAttribute="height" constant="70" id="23Z-B9-220"/>
                                     <constraint firstAttribute="width" constant="150" id="NOK-Jg-2sc"/>
                                 </constraints>
-                                <state key="normal" title="Become a supporter">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DS4-t4-4q8" kind="show" id="RsU-1N-YWG"/>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kph-3q-tGH"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AAP-logo-Eng" translatesAutoresizingMaskIntoConstraints="NO" id="CK3-BD-czy">
@@ -99,8 +99,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="X3C-BZ-MBt"/>
                     <connections>
-                        <segue destination="SGK-4A-A61" kind="show" id="sJS-ee-kcT"/>
                         <segue destination="DS4-t4-4q8" kind="show" id="y8y-nL-5ZC"/>
+                        <segue destination="9nA-KC-eVN" kind="show" identifier="loadTabbar" id="C89-gA-9rT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -277,9 +277,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h79-Z3-QNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525.5999999999999" y="75.112443778110944"/>
+            <point key="canvasLocation" x="1911" y="17"/>
         </scene>
-        <!--News View Controller-->
+        <!--News feed-->
         <scene sceneID="saG-Di-z7M">
             <objects>
                 <viewController id="ahF-09-VB5" customClass="NewsViewController" customModule="AapUK" customModuleProvider="target" sceneMemberID="viewController">
@@ -362,6 +362,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTu-l6-RQ2"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="News feed" id="4CU-te-3NP"/>
                     <navigationItem key="navigationItem" id="nG1-lk-A3I"/>
                     <connections>
                         <outlet property="newsTable" destination="I0a-WM-aGh" id="lkT-GK-Ycg"/>
@@ -369,9 +370,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NA-x4-y6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="-2277.2113943028489"/>
+            <point key="canvasLocation" x="1249" y="1030"/>
         </scene>
-        <!--About View Controller-->
+        <!--About-->
         <scene sceneID="Qdc-zQ-6eA">
             <objects>
                 <viewController id="xt2-Qb-7xi" customClass="AboutViewController" customModule="AapUK" customModuleProvider="target" sceneMemberID="viewController">
@@ -381,11 +382,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Udu-aY-hzv"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="About" id="b0u-Hx-tt2"/>
                     <navigationItem key="navigationItem" id="mWq-G6-2TY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSW-sd-FaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="-1366"/>
+            <point key="canvasLocation" x="948" y="1721"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c6x-I7-URk">
@@ -403,7 +405,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uh6-xh-mkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463" y="28"/>
+            <point key="canvasLocation" x="-665" y="34"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IFz-4e-apO">
@@ -416,59 +418,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="YSS-oB-r8D" kind="relationship" relationship="viewControllers" id="Fch-pM-Z3K"/>
-                        <segue destination="Ubd-Z4-mLi" kind="relationship" relationship="viewControllers" id="v75-0j-HTV"/>
+                        <segue destination="ahF-09-VB5" kind="relationship" relationship="viewControllers" id="3yn-E9-laP"/>
+                        <segue destination="xt2-Qb-7xi" kind="relationship" relationship="viewControllers" id="J3X-45-6Jz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJp-Is-4Tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1542" y="-1773"/>
-        </scene>
-        <!--News feed-->
-        <scene sceneID="tdu-KI-bGJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YSS-oB-r8D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News feed" id="7dM-CE-qfR"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="clo-ws-x3m">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ahF-09-VB5" kind="relationship" relationship="rootViewController" id="dXY-2B-6ph"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fDi-rg-ANe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-710" y="-2277"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="531-xd-dCh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ubd-Z4-mLi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="U7t-be-BLo"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2vD-TZ-Sr7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xt2-Qb-7xi" kind="relationship" relationship="rootViewController" id="Dh1-H6-Nym"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QoU-Wq-dzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="211.19999999999999" y="-1365.5172413793105"/>
+            <point key="canvasLocation" x="156" y="1012"/>
         </scene>
     </scenes>
     <resources>
         <image name="AAP-logo-Eng" width="960" height="960"/>
         <image name="India-Flag-PNG-File" width="800" height="634"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6xh-r1-NLm"/>
-        <segue reference="RsU-1N-YWG"/>
-    </inferredMetricsTieBreakers>
 </document>

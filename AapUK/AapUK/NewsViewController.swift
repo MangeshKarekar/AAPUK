@@ -18,7 +18,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "News Feed"
+        self.title = "AAP UK"
         setTable()
        setNews()
         // Do any additional setup after loading the view.
@@ -58,6 +58,10 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "News Feed"
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let documents = documents{
