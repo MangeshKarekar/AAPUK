@@ -287,16 +287,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3S-fw-GwY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Login" id="zq7-9J-9BP"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mgi-1D-gYO"/>
-                                    <barButtonItem title="Register" id="jW8-Ld-Nr3"/>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-WM-aGh">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="7.5" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="153" id="cyD-HE-MDu" customClass="NewsTableViewCell" customModule="AapUK" customModuleProvider="target">
@@ -352,12 +344,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fTu-l6-RQ2" firstAttribute="bottom" secondItem="I0a-WM-aGh" secondAttribute="bottom" id="2kh-E4-VTE"/>
-                            <constraint firstItem="D3S-fw-GwY" firstAttribute="top" secondItem="fTu-l6-RQ2" secondAttribute="top" id="FEL-mY-XeV"/>
+                            <constraint firstItem="I0a-WM-aGh" firstAttribute="height" secondItem="4pZ-h7-fHW" secondAttribute="height" id="BUs-jD-5uZ"/>
                             <constraint firstItem="I0a-WM-aGh" firstAttribute="width" secondItem="4pZ-h7-fHW" secondAttribute="width" id="P2f-gL-9Cy"/>
-                            <constraint firstItem="D3S-fw-GwY" firstAttribute="centerX" secondItem="fTu-l6-RQ2" secondAttribute="centerX" id="YO3-sb-8ef"/>
-                            <constraint firstItem="I0a-WM-aGh" firstAttribute="top" secondItem="D3S-fw-GwY" secondAttribute="bottom" id="b4u-2j-85Z"/>
-                            <constraint firstItem="D3S-fw-GwY" firstAttribute="width" secondItem="4pZ-h7-fHW" secondAttribute="width" id="kLk-JA-Fz3"/>
+                            <constraint firstItem="I0a-WM-aGh" firstAttribute="centerY" secondItem="fTu-l6-RQ2" secondAttribute="centerY" id="iWh-y7-5qT"/>
                             <constraint firstItem="I0a-WM-aGh" firstAttribute="centerX" secondItem="fTu-l6-RQ2" secondAttribute="centerX" id="psz-ms-82Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTu-l6-RQ2"/>
