@@ -32,8 +32,6 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func checkFirstTimeBoot(){
         
         if let _ = UserDefaults.standard.value(forKey: firstTimeBootKey) as? Bool{
-            
-            self.performSegue(withIdentifier: joinUsSegue, sender: nil)
         }else{
             UserDefaults.standard.set(true, forKey: firstTimeBootKey)
             self.performSegue(withIdentifier: joinUsSegue, sender: nil)

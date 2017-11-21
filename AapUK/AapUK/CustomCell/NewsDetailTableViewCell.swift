@@ -49,16 +49,19 @@ class NewsDetailTableViewCell: UITableViewCell {
         let data = document.data()
         title.text = data["title"] as? String
         details.text = data["body"] as? String
+        
+        contactInfo.text = ""
+        location.text = ""
+        time.text = ""
+
     }
     
     func setEvent(forDocument document:DocumentSnapshot){
-        //title.numberOfLines = 0
-       // details.numberOfLines = 0
         let data = document.data()
         title.text = data["title"] as? String
-       // contactInfo.text = data["contact info"] as? String
-       // location.text = data["location"] as? String
-       // time.text = data["time"] as? String
+        contactInfo.text = data["contact info"] as? String
+        location.text = data["location"] as? String
+        time.text = data["time"] as? String
         details.text = data["details"] as? String
     }
 
