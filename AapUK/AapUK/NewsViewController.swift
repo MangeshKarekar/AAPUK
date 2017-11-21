@@ -15,7 +15,8 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     let cellID = "newsCell"
     var documents: [DocumentSnapshot]?
     let refreshControl = UIRefreshControl()
-    
+    let newsdetailsSegue = "newsdetailsSegue"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "News"
@@ -49,19 +50,24 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == newsdetailsSegue{
+            let destinationViewController = segue.destination as! NewsDetailsViewController
+            let document = sender as? DocumentSnapshot
+            destinationViewController.newsDocument = document
+        }
     }
-    */
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "News Feed"
-    }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "News Feed"
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let documents = documents{
@@ -76,6 +82,10 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
             cell.newsDocument = documents[indexPath.row]
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: newsdetailsSegue, sender: documents?[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
