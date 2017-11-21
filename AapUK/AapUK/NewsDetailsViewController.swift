@@ -15,7 +15,7 @@ class NewsDetailsViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var detailsTable: UITableView!
     let cellID = "cell"
-    
+    let newsDetailCellID = "newsDetailCell"
     var newsDocument: DocumentSnapshot?
     var eventsDocument: DocumentSnapshot?
 
@@ -23,6 +23,8 @@ class NewsDetailsViewController: UIViewController,UITableViewDelegate,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        detailsTable.estimatedRowHeight = 150
+        detailsTable.rowHeight = UITableViewAutomaticDimension
         // Do any additional setup after loading the view.
     }
 
@@ -48,27 +50,21 @@ class NewsDetailsViewController: UIViewController,UITableViewDelegate,UITableVie
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID)!
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.textAlignment  = .center
-        cell.detailTextLabel?.numberOfLines = 0
+        let cell = tableView.dequeueReusableCell(withIdentifier: newsDetailCellID) as! NewsDetailTableViewCell
+        cell.title.numberOfLines = 0
+        cell.details.numberOfLines = 0
         if newsDocument != nil{
-            cell.textLabel?.text = newsDocument?["title"] as? String
-            cell.detailTextLabel?.text = newsDocument?["body"] as? String
+            cell.newsDocument = newsDocument
             setImage(forLink: newsDocument?["imageSource"] as? String)
         }
         
         if eventsDocument != nil{
-            cell.textLabel?.text = eventsDocument?["title"] as? String
-            cell.detailTextLabel?.text = eventsDocument?["details"] as? String
+            cell.eventsDocument = eventsDocument
             DispatchQueue.global().async {[weak self] in
                 self?.setImage(forBase64: self?.eventsDocument?["imageSource"] as? String)
             }
         }
-        
         return cell
-        
     }
 
     func setImage(forLink link: String?){

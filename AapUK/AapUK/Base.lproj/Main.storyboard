@@ -330,6 +330,41 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsDetailCell" rowHeight="131" id="f9f-wr-Myi" customClass="NewsDetailTableViewCell" customModule="AapUK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="267.5" width="375" height="131"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f9f-wr-Myi" id="arg-3u-zXB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjX-ot-d5e">
+                                                    <rect key="frame" x="0.0" y="11" width="375" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-h7-HPj">
+                                                    <rect key="frame" x="0.0" y="41" width="375" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SjX-ot-d5e" firstAttribute="top" secondItem="arg-3u-zXB" secondAttribute="top" constant="11" id="27h-hO-NZd"/>
+                                                <constraint firstItem="K9l-h7-HPj" firstAttribute="leading" secondItem="arg-3u-zXB" secondAttribute="leading" id="DxY-FQ-j69"/>
+                                                <constraint firstItem="K9l-h7-HPj" firstAttribute="top" secondItem="SjX-ot-d5e" secondAttribute="bottom" constant="9" id="IaJ-If-jvN"/>
+                                                <constraint firstAttribute="bottom" secondItem="K9l-h7-HPj" secondAttribute="bottom" constant="72" id="Qo6-lg-5zs"/>
+                                                <constraint firstItem="SjX-ot-d5e" firstAttribute="leading" secondItem="arg-3u-zXB" secondAttribute="leading" id="UP4-7u-N4s"/>
+                                                <constraint firstAttribute="trailing" secondItem="SjX-ot-d5e" secondAttribute="trailing" id="gwG-hK-tBU"/>
+                                                <constraint firstAttribute="trailing" secondItem="K9l-h7-HPj" secondAttribute="trailing" id="mNc-JQ-ACI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="details" destination="K9l-h7-HPj" id="MY4-dc-1Ea"/>
+                                            <outlet property="title" destination="SjX-ot-d5e" id="JEP-cT-c4C"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="asD-s9-0V0" id="V68-fL-w9r"/>

@@ -22,6 +22,7 @@
 		9E84ADC21FC44AB7003D90A1 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84ADC11FC44AB7003D90A1 /* EventsViewController.swift */; };
 		9E84ADC41FC45DDA003D90A1 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84ADC31FC45DDA003D90A1 /* EventsTableViewCell.swift */; };
 		9E84ADC61FC46601003D90A1 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84ADC51FC46601003D90A1 /* NewsDetailsViewController.swift */; };
+		9E84ADC81FC46E78003D90A1 /* NewsDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84ADC71FC46E78003D90A1 /* NewsDetailTableViewCell.swift */; };
 		9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B531FA7754F008592DB /* CustomButtons.swift */; };
 		9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */; };
 		9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B571FA793AE008592DB /* SupporterViewController.swift */; };
@@ -48,6 +49,7 @@
 		9E84ADC11FC44AB7003D90A1 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		9E84ADC31FC45DDA003D90A1 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		9E84ADC51FC46601003D90A1 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		9E84ADC71FC46E78003D90A1 /* NewsDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9EAA0B531FA7754F008592DB /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolounteerViewController.swift; sourceTree = "<group>"; };
 		9EAA0B571FA793AE008592DB /* SupporterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				9EAA0B591FA794BE008592DB /* AddressTableViewCell.swift */,
 				9E37C5C81FB5AA3D00950CAD /* NewsTableViewCell.swift */,
 				9E84ADC31FC45DDA003D90A1 /* EventsTableViewCell.swift */,
+				9E84ADC71FC46E78003D90A1 /* NewsDetailTableViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9E84ADC21FC44AB7003D90A1 /* EventsViewController.swift in Sources */,
 				9E84ADC41FC45DDA003D90A1 /* EventsTableViewCell.swift in Sources */,
 				9E176B8F1FB4B6B60061823B /* NewsViewController.swift in Sources */,
+				9E84ADC81FC46E78003D90A1 /* NewsDetailTableViewCell.swift in Sources */,
 				9E84ADC01FC443FF003D90A1 /* User.swift in Sources */,
 				9E2E789C1FAB74270014ECF0 /* Supporter.swift in Sources */,
 				9E176B911FB4B6CD0061823B /* AboutViewController.swift in Sources */,
