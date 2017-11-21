@@ -17,13 +17,30 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     let refreshControl = UIRefreshControl()
     let newsdetailsSegue = "newsdetailsSegue"
 
+    let firstTimeBootKey = "firstTimeBootKey"
+    let joinUsSegue = "joinUsSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "News"
         setTable()
        setNews()
+        checkFirstTimeBoot()
         // Do any additional setup after loading the view.
     }
+    
+    func checkFirstTimeBoot(){
+        
+        if let _ = UserDefaults.standard.value(forKey: firstTimeBootKey) as? Bool{
+            
+            self.performSegue(withIdentifier: joinUsSegue, sender: nil)
+        }else{
+            UserDefaults.standard.set(true, forKey: firstTimeBootKey)
+            self.performSegue(withIdentifier: joinUsSegue, sender: nil)
+        }
+        
+    }
+    
     func setTable(){
         
         refreshControl.addTarget(self, action: #selector(refreshNews), for: .valueChanged)
