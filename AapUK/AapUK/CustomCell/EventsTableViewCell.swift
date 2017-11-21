@@ -17,6 +17,7 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet var contactInfo: UILabel!
     @IBOutlet var location: UILabel!
     @IBOutlet var time: UILabel!
+    @IBOutlet var details: UILabel!
 
     
     var eventsDocument: DocumentSnapshot?{
@@ -43,6 +44,7 @@ class EventsTableViewCell: UITableViewCell {
         contactInfo.text = data["contact info"] as? String
         location.text = data["location"] as? String
         time.text = data["time"] as? String
+        details.text = data["details"] as? String
         DispatchQueue.global().async {[weak self] in
             self?.setImage(forBase64: data["imageSource"] as? String)
         }

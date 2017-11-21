@@ -427,7 +427,7 @@
                                 <rect key="frame" x="0.0" y="-14.5" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventsCell" rowHeight="153" id="OJP-GM-d9A" customClass="NewsTableViewCell" customModule="AapUK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventsCell" rowHeight="153" id="OJP-GM-d9A" customClass="EventsTableViewCell" customModule="AapUK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OJP-GM-d9A" id="kec-ad-62Q">
@@ -441,44 +441,66 @@
                                                         <constraint firstAttribute="height" constant="80" id="K3W-h3-yFA"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uui-mI-oCB">
-                                                    <rect key="frame" x="109" y="46" width="251" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS0-D5-2ja">
-                                                    <rect key="frame" x="109" y="68" width="254" height="33.5"/>
+                                                    <rect key="frame" x="109" y="56" width="254" height="33.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evi-8R-d23">
-                                                    <rect key="frame" x="12" y="128.5" width="29" height="12"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dB1-Za-Knc">
+                                                    <rect key="frame" x="12" y="128.5" width="363" height="12"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evi-8R-d23">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPL-JG-uv9">
+                                                            <rect key="frame" x="186" y="0.0" width="177" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contact" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOw-2q-78r">
+                                                    <rect key="frame" x="109" y="98.5" width="37" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uui-mI-oCB">
+                                                    <rect key="frame" x="109" y="34.5" width="251" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aS0-D5-2ja" firstAttribute="top" secondItem="Uui-mI-oCB" secondAttribute="bottom" constant="1" id="679-8c-DC8"/>
-                                                <constraint firstItem="evi-8R-d23" firstAttribute="leading" secondItem="kec-ad-62Q" secondAttribute="leading" constant="12" id="68M-Ya-BWe"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uui-mI-oCB" secondAttribute="trailing" constant="15" id="7q5-6O-pI3"/>
-                                                <constraint firstItem="evi-8R-d23" firstAttribute="top" secondItem="fZI-Gf-YJn" secondAttribute="bottom" constant="12" id="Cro-HL-paL"/>
+                                                <constraint firstItem="jOw-2q-78r" firstAttribute="leading" secondItem="fZI-Gf-YJn" secondAttribute="trailing" constant="17" id="8In-mM-IFX"/>
                                                 <constraint firstItem="aS0-D5-2ja" firstAttribute="leading" secondItem="fZI-Gf-YJn" secondAttribute="trailing" constant="17" id="Dnc-Qa-uYB"/>
+                                                <constraint firstItem="jOw-2q-78r" firstAttribute="top" secondItem="aS0-D5-2ja" secondAttribute="bottom" constant="9" id="OhD-3b-rsH"/>
+                                                <constraint firstItem="dB1-Za-Knc" firstAttribute="leading" secondItem="kec-ad-62Q" secondAttribute="leading" constant="12" id="Q4X-X7-66h"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jOw-2q-78r" secondAttribute="trailing" constant="20" symbolic="YES" id="eEw-zn-Ksy"/>
                                                 <constraint firstItem="fZI-Gf-YJn" firstAttribute="centerY" secondItem="kec-ad-62Q" secondAttribute="centerY" id="eSW-oZ-1lS"/>
+                                                <constraint firstAttribute="trailing" secondItem="dB1-Za-Knc" secondAttribute="trailing" id="gWt-Xa-ATl"/>
+                                                <constraint firstItem="dB1-Za-Knc" firstAttribute="top" secondItem="fZI-Gf-YJn" secondAttribute="bottom" constant="12" id="iSG-Oa-RwQ"/>
                                                 <constraint firstItem="Uui-mI-oCB" firstAttribute="leading" secondItem="fZI-Gf-YJn" secondAttribute="trailing" constant="17" id="nwf-c2-ST0"/>
                                                 <constraint firstItem="fZI-Gf-YJn" firstAttribute="leading" secondItem="kec-ad-62Q" secondAttribute="leading" constant="12" id="qXd-Hm-6O7"/>
                                                 <constraint firstAttribute="trailing" secondItem="aS0-D5-2ja" secondAttribute="trailing" constant="12" id="vFK-W3-YYy"/>
-                                                <constraint firstItem="Uui-mI-oCB" firstAttribute="centerY" secondItem="fZI-Gf-YJn" secondAttribute="centerY" constant="-20" id="xPv-g0-fuA"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="evi-8R-d23" secondAttribute="trailing" constant="20" symbolic="YES" id="zlD-Ly-IfT"/>
+                                                <constraint firstItem="Uui-mI-oCB" firstAttribute="centerY" secondItem="fZI-Gf-YJn" secondAttribute="centerY" constant="-32" id="xPv-g0-fuA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="evi-8R-d23" id="KxA-bB-Kgd"/>
-                                            <outlet property="newsImageView" destination="fZI-Gf-YJn" id="50M-5Q-tQo"/>
-                                            <outlet property="previewLabel" destination="aS0-D5-2ja" id="XEy-Ip-8Ad"/>
-                                            <outlet property="titleLabel" destination="Uui-mI-oCB" id="HXD-eG-KTh"/>
+                                            <outlet property="contactInfo" destination="jOw-2q-78r" id="c8B-Nb-6LV"/>
+                                            <outlet property="details" destination="aS0-D5-2ja" id="D8d-hm-bgH"/>
+                                            <outlet property="eventsImageView" destination="fZI-Gf-YJn" id="Q1q-ub-fft"/>
+                                            <outlet property="location" destination="iPL-JG-uv9" id="QeN-2u-fV9"/>
+                                            <outlet property="time" destination="evi-8R-d23" id="8T5-Zi-RNE"/>
+                                            <outlet property="title" destination="Uui-mI-oCB" id="v5x-Qh-K76"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -25,14 +25,6 @@ class NewsTableViewCell: UITableViewCell {
         }
     }
     
-    var eventsDocument: DocumentSnapshot?{
-        didSet{
-            if let eventsDocument = eventsDocument{
-                setEvent(forDocument: eventsDocument)
-            }
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -58,18 +50,5 @@ class NewsTableViewCell: UITableViewCell {
             let request = Request(url: url)
             Nuke.loadImage(with: request, into: newsImageView)
         }
-    }
-    
-    func setEvent(forDocument document:DocumentSnapshot){
-        let data = document.data()
-        titleLabel.text = data["title"] as? String
-        previewLabel.text = data["preview"] as? String
-        dateLabel.text = data["date"] as? String
-      //  setImage(forLink: data["imageSource"] as? String)
-    }
-    
-    func setImage(forBase64 string: String?){
-       
-        
     }
 }
