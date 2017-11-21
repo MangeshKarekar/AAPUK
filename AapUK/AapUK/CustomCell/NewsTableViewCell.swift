@@ -15,11 +15,20 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var newsImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var previewLabel: UILabel!
-    
-    var document: DocumentSnapshot?{
+    @IBOutlet var dateLabel: UILabel!
+
+    var newsDocument: DocumentSnapshot?{
         didSet{
-            if let document = document{
-                setData(forDocument: document)
+            if let newsDocument = newsDocument{
+                setNews(forDocument: newsDocument)
+            }
+        }
+    }
+    
+    var eventsDocument: DocumentSnapshot?{
+        didSet{
+            if let eventsDocument = eventsDocument{
+                setEvent(forDocument: eventsDocument)
             }
         }
     }
@@ -36,10 +45,11 @@ class NewsTableViewCell: UITableViewCell {
     }
     
 
-    func setData(forDocument document:DocumentSnapshot){
+    func setNews(forDocument document:DocumentSnapshot){
         let data = document.data()
         titleLabel.text = data["title"] as? String
         previewLabel.text = data["preview"] as? String
+        dateLabel.text = data["date"] as? String
         setImage(forLink: data["imageSource"] as? String)
     }
     
@@ -48,5 +58,18 @@ class NewsTableViewCell: UITableViewCell {
             let request = Request(url: url)
             Nuke.loadImage(with: request, into: newsImageView)
         }
+    }
+    
+    func setEvent(forDocument document:DocumentSnapshot){
+        let data = document.data()
+        titleLabel.text = data["title"] as? String
+        previewLabel.text = data["preview"] as? String
+        dateLabel.text = data["date"] as? String
+      //  setImage(forLink: data["imageSource"] as? String)
+    }
+    
+    func setImage(forBase64 string: String?){
+       
+        
     }
 }

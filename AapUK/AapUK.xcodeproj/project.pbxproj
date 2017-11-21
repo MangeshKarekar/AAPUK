@@ -19,6 +19,7 @@
 		9E37C5CD1FB5D35700950CAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E37C5CC1FB5D35700950CAD /* GoogleService-Info.plist */; };
 		9E7E23351FA8A2DB00F82341 /* Volounteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7E23341FA8A2DB00F82341 /* Volounteer.swift */; };
 		9E84ADC01FC443FF003D90A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84ADBF1FC443FF003D90A1 /* User.swift */; };
+		9E84ADC21FC44AB7003D90A1 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84ADC11FC44AB7003D90A1 /* EventsViewController.swift */; };
 		9EAA0B541FA7754F008592DB /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B531FA7754F008592DB /* CustomButtons.swift */; };
 		9EAA0B561FA793A1008592DB /* VolounteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */; };
 		9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA0B571FA793AE008592DB /* SupporterViewController.swift */; };
@@ -42,6 +43,7 @@
 		9E37C5CC1FB5D35700950CAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E7E23341FA8A2DB00F82341 /* Volounteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volounteer.swift; sourceTree = "<group>"; };
 		9E84ADBF1FC443FF003D90A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9E84ADC11FC44AB7003D90A1 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		9EAA0B531FA7754F008592DB /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9EAA0B551FA793A1008592DB /* VolounteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolounteerViewController.swift; sourceTree = "<group>"; };
 		9EAA0B571FA793AE008592DB /* SupporterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				9E253E3B1FA130EC0007BA1D /* ViewController.swift */,
 				9E37C5CA1FB5AA5800950CAD /* CustomCell */,
 				9E176B8E1FB4B6B60061823B /* NewsViewController.swift */,
+				9E84ADC11FC44AB7003D90A1 /* EventsViewController.swift */,
 				9E176B901FB4B6CD0061823B /* AboutViewController.swift */,
 				9E253E3D1FA130EC0007BA1D /* Main.storyboard */,
 				9E253E401FA130EC0007BA1D /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 				9EAA0B581FA793AE008592DB /* SupporterViewController.swift in Sources */,
 				9E253E3A1FA130EC0007BA1D /* AppDelegate.swift in Sources */,
 				9E7E23351FA8A2DB00F82341 /* Volounteer.swift in Sources */,
+				9E84ADC21FC44AB7003D90A1 /* EventsViewController.swift in Sources */,
 				9E176B8F1FB4B6B60061823B /* NewsViewController.swift in Sources */,
 				9E84ADC01FC443FF003D90A1 /* User.swift in Sources */,
 				9E2E789C1FAB74270014ECF0 /* Supporter.swift in Sources */,

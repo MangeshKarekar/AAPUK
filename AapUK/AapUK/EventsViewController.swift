@@ -1,51 +1,51 @@
 //
-//  NewsViewController.swift
+//  EventsViewController.swift
 //  AapUK
 //
-//  Created by Mangesh Karekar on 09/11/2017.
+//  Created by Mangesh Karekar on 21/11/2017.
 //  Copyright © 2017 Mangesh. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class EventsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
-    @IBOutlet weak var newsTable: UITableView!
-    let cellID = "newsCell"
+    @IBOutlet weak var eventsTable: UITableView!
+    let cellID = "eventsCell"
     var documents: [DocumentSnapshot]?
     let refreshControl = UIRefreshControl()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "News"
+        self.title = "Events"
         setTable()
-       setNews()
+        setEvents()
         // Do any additional setup after loading the view.
     }
+    
     func setTable(){
-        
-        refreshControl.addTarget(self, action: #selector(refreshNews), for: .valueChanged)
-        newsTable.tableHeaderView = refreshControl
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        refreshControl.addTarget(self, action: #selector(refreshEvents), for: .valueChanged)
+        eventsTable.tableHeaderView = refreshControl
     }
     
-    @objc func refreshNews() {
-        setNews()
+    @objc func refreshEvents() {
+        setEvents()
         refreshControl.endRefreshing()
         // Code to refresh table view
     }
     
-    func setNews(){
+    func setEvents(){
         let defaultStore = Firestore.firestore()
         defaultStore.collection("News").getDocuments {[weak self] (querySnapShot, error) in
             self?.documents = querySnapShot?.documents
-            self?.newsTable.reloadData()
+            self?.eventsTable.reloadData()
         }
+    }
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 
@@ -59,10 +59,6 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     */
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "News Feed"
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let documents = documents{
             return documents.count
@@ -73,7 +69,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! NewsTableViewCell
         if let documents = documents{
-            cell.newsDocument = documents[indexPath.row]
+            cell.eventsDocument = documents[indexPath.row]
         }
         return cell
     }
@@ -85,6 +81,5 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-    
 
 }
