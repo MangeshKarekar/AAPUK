@@ -36,7 +36,7 @@ class EventsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     func setEvents(){
         let defaultStore = Firestore.firestore()
-        defaultStore.collection("News").getDocuments {[weak self] (querySnapShot, error) in
+        defaultStore.collection("Events").getDocuments {[weak self] (querySnapShot, error) in
             self?.documents = querySnapShot?.documents
             self?.eventsTable.reloadData()
         }
@@ -67,7 +67,7 @@ class EventsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! EventsTableViewCell
         if let documents = documents{
             cell.eventsDocument = documents[indexPath.row]
         }
