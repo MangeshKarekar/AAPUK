@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nm0-l3-b9l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nA-KC-eVN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="width" constant="150" id="f21-dx-nhd"/>
                                     <constraint firstAttribute="height" constant="70" id="jKY-hn-0WY"/>
                                 </constraints>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Join Us">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -100,7 +100,6 @@
                     <navigationItem key="navigationItem" id="X3C-BZ-MBt"/>
                     <connections>
                         <segue destination="DS4-t4-4q8" kind="show" id="y8y-nL-5ZC"/>
-                        <segue destination="9nA-KC-eVN" kind="show" identifier="loadTabbar" id="C89-gA-9rT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,8 +114,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLQ-PU-OBX">
+                                <rect key="frame" x="157.5" y="617" width="60" height="30"/>
+                                <state key="normal" title="Join Us !"/>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="umk-o2-qwz">
-                                <rect key="frame" x="0.0" y="32" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="535"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addressCell" id="B1m-j5-Mld" customClass="AddressTableViewCell" customModule="AapUK" customModuleProvider="target">
@@ -178,10 +181,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="umk-o2-qwz" firstAttribute="height" secondItem="uGG-fZ-D0e" secondAttribute="height" id="Jc2-ML-9m8"/>
-                            <constraint firstItem="umk-o2-qwz" firstAttribute="centerY" secondItem="QYp-Pa-3vN" secondAttribute="centerY" id="Oke-7G-M4C"/>
-                            <constraint firstItem="umk-o2-qwz" firstAttribute="centerX" secondItem="QYp-Pa-3vN" secondAttribute="centerX" id="V91-0L-03K"/>
-                            <constraint firstItem="umk-o2-qwz" firstAttribute="width" secondItem="uGG-fZ-D0e" secondAttribute="width" id="bEI-Iv-cw4"/>
+                            <constraint firstItem="yLQ-PU-OBX" firstAttribute="top" secondItem="umk-o2-qwz" secondAttribute="bottom" constant="18" id="J2G-2S-zXa"/>
+                            <constraint firstItem="umk-o2-qwz" firstAttribute="centerX" secondItem="QYp-Pa-3vN" secondAttribute="centerX" id="Odf-l0-7Sz"/>
+                            <constraint firstItem="umk-o2-qwz" firstAttribute="top" secondItem="QYp-Pa-3vN" secondAttribute="top" id="SOX-iR-400"/>
+                            <constraint firstItem="umk-o2-qwz" firstAttribute="width" secondItem="uGG-fZ-D0e" secondAttribute="width" id="it8-CY-stP"/>
+                            <constraint firstItem="yLQ-PU-OBX" firstAttribute="centerX" secondItem="QYp-Pa-3vN" secondAttribute="centerX" id="ls6-1A-Gjp"/>
+                            <constraint firstItem="QYp-Pa-3vN" firstAttribute="bottom" secondItem="yLQ-PU-OBX" secondAttribute="bottom" constant="20" id="m2j-TX-E2A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QYp-Pa-3vN"/>
                     </view>
@@ -202,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="AD8-wD-5ZN">
-                                <rect key="frame" x="0.0" y="32" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="518"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addressCell" id="REK-kp-lXg" customClass="AddressTableViewCell" customModule="AapUK" customModuleProvider="target">
@@ -261,13 +266,19 @@
                                     <outlet property="delegate" destination="SGK-4A-A61" id="vi3-TY-kZy"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDt-5c-8MT">
+                                <rect key="frame" x="157" y="609" width="60" height="30"/>
+                                <state key="normal" title="Join Us !"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="centerX" secondItem="gOx-kK-PPX" secondAttribute="centerX" id="LJ3-gW-MHR"/>
-                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="centerY" secondItem="gOx-kK-PPX" secondAttribute="centerY" id="UKE-e3-Gn1"/>
-                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="width" secondItem="GO6-p0-ZFL" secondAttribute="width" id="bMC-4e-3O5"/>
-                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="height" secondItem="GO6-p0-ZFL" secondAttribute="height" id="qZw-nV-Q62"/>
+                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="centerX" secondItem="gOx-kK-PPX" secondAttribute="centerX" id="2Uc-r9-vxl"/>
+                            <constraint firstItem="QDt-5c-8MT" firstAttribute="centerX" secondItem="gOx-kK-PPX" secondAttribute="centerX" id="4wR-Ml-aZ6"/>
+                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="top" secondItem="gOx-kK-PPX" secondAttribute="top" id="7TL-Za-7Ub"/>
+                            <constraint firstItem="QDt-5c-8MT" firstAttribute="top" secondItem="AD8-wD-5ZN" secondAttribute="bottom" constant="27" id="hHt-Bw-cWy"/>
+                            <constraint firstItem="gOx-kK-PPX" firstAttribute="bottom" secondItem="QDt-5c-8MT" secondAttribute="bottom" constant="28" id="pMc-yh-rPJ"/>
+                            <constraint firstItem="AD8-wD-5ZN" firstAttribute="width" secondItem="GO6-p0-ZFL" secondAttribute="width" id="zvA-A0-hOK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gOx-kK-PPX"/>
                     </view>
@@ -277,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h79-Z3-QNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="17"/>
+            <point key="canvasLocation" x="1909.5999999999999" y="16.641679160419791"/>
         </scene>
         <!--News feed-->
         <scene sceneID="saG-Di-z7M">
@@ -288,7 +299,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-WM-aGh">
-                                <rect key="frame" x="0.0" y="7.5" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-14.5" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="153" id="cyD-HE-MDu" customClass="NewsTableViewCell" customModule="AapUK" customModuleProvider="target">
@@ -351,7 +362,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTu-l6-RQ2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News feed" id="4CU-te-3NP"/>
+                    <tabBarItem key="tabBarItem" title="News feed" image="news" id="4CU-te-3NP"/>
                     <navigationItem key="navigationItem" id="nG1-lk-A3I"/>
                     <connections>
                         <outlet property="newsTable" destination="I0a-WM-aGh" id="lkT-GK-Ycg"/>
@@ -359,7 +370,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NA-x4-y6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="1030"/>
+            <point key="canvasLocation" x="-817" y="797"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rov-4U-fmd">
+            <objects>
+                <viewController id="TY3-b0-Eeh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8RL-d1-zho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IN3-fX-EF8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ehx-GR-9nx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4V-gS-SAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="797"/>
         </scene>
         <!--About-->
         <scene sceneID="Qdc-zQ-6eA">
@@ -371,12 +398,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Udu-aY-hzv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="b0u-Hx-tt2"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="b0u-Hx-tt2"/>
                     <navigationItem key="navigationItem" id="mWq-G6-2TY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSW-sd-FaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="1721"/>
+            <point key="canvasLocation" x="300" y="2116"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="QNq-hE-z5B">
+            <objects>
+                <viewController id="tvd-uh-uul" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jom-b1-OwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xi4-Ae-1Xu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Events" image="events" id="bay-nS-h7T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Hg-B5-cSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="1737"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c6x-I7-URk">
@@ -409,15 +452,40 @@
                     <connections>
                         <segue destination="ahF-09-VB5" kind="relationship" relationship="viewControllers" id="3yn-E9-laP"/>
                         <segue destination="xt2-Qb-7xi" kind="relationship" relationship="viewControllers" id="J3X-45-6Jz"/>
+                        <segue destination="tvd-uh-uul" kind="relationship" relationship="viewControllers" id="buj-eK-E8H"/>
+                        <segue destination="14W-nl-EKv" kind="relationship" relationship="viewControllers" id="JBV-qV-Wsh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJp-Is-4Tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="1012"/>
+            <point key="canvasLocation" x="143" y="1305"/>
+        </scene>
+        <!--Join Us-->
+        <scene sceneID="Xcs-Am-X9p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="14W-nl-EKv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Join Us" image="joinUs" id="1fy-NY-pwt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oV5-N8-f9N">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TY3-b0-Eeh" kind="relationship" relationship="rootViewController" id="cee-cO-aSu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhN-9g-GGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="788"/>
         </scene>
     </scenes>
     <resources>
         <image name="AAP-logo-Eng" width="960" height="960"/>
         <image name="India-Flag-PNG-File" width="800" height="634"/>
+        <image name="about" width="30" height="30"/>
+        <image name="events" width="30" height="30"/>
+        <image name="joinUs" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
     </resources>
 </document>

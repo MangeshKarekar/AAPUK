@@ -8,11 +8,6 @@
 
 import Foundation
 
-public enum PassportType: String{
-    case indian = "Indian"
-    case nonIndian = "Non Indian"
-}
-
 struct Volounteer {
     
     var name = ""
