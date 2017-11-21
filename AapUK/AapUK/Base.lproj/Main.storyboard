@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18t-ZC-ANv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.2" y="-664.31784107946032"/>
+            <point key="canvasLocation" x="1866" y="-772"/>
         </scene>
         <!--Volounteer View Controller-->
         <scene sceneID="6YL-XX-B1g">
@@ -288,7 +288,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h79-Z3-QNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909.5999999999999" y="16.641679160419791"/>
+            <point key="canvasLocation" x="2687" y="-150"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oyg-YU-WUV">
+            <objects>
+                <viewController id="n3Q-5A-6cT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WS6-qs-7nr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="APK-BD-dB4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu7-KN-RUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3053" y="632"/>
         </scene>
         <!--News Details View Controller-->
         <scene sceneID="Vp8-DF-hff">
@@ -475,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCb-jH-MAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="977"/>
+            <point key="canvasLocation" x="1580" y="642"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="saG-Di-z7M">
