@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="2687" y="-150"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="oyg-YU-WUV">
             <objects>
-                <viewController id="n3Q-5A-6cT" sceneMemberID="viewController">
+                <viewController id="n3Q-5A-6cT" customClass="RegisterViewController" customModule="AapUK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WS6-qs-7nr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,6 +308,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerClicked:" destination="n3Q-5A-6cT" eventType="touchUpInside" id="kZf-Sd-O7x"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eDG-XL-yxm">
                                 <rect key="frame" x="0.0" y="69" width="375" height="493"/>
@@ -330,11 +333,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailsCell" rowHeight="172" id="eV3-v9-LfN" customClass="DetailsTableViewCell" customModule="AapUK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="99.5" width="375" height="172"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailsCell" rowHeight="175" id="eV3-v9-LfN" customClass="DetailsTableViewCell" customModule="AapUK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eV3-v9-LfN" id="HRe-R1-fgw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="171.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chO-uS-B2z">
@@ -405,6 +408,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="K9v-gh-JIH" secondAttribute="trailing" constant="9" id="UIF-fb-DkD"/>
                                                 <constraint firstItem="AhZ-sK-6KE" firstAttribute="centerY" secondItem="1Vt-ES-QXf" secondAttribute="centerY" id="aDI-Kp-Dfi"/>
                                                 <constraint firstItem="J8N-o3-D4W" firstAttribute="top" secondItem="26H-EF-Gmd" secondAttribute="bottom" constant="9" id="cqc-oJ-kp1"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Vt-ES-QXf" secondAttribute="bottom" constant="18.5" id="kN1-i7-Ubp"/>
                                                 <constraint firstItem="AhZ-sK-6KE" firstAttribute="top" secondItem="YOj-aW-BBc" secondAttribute="bottom" constant="14" id="liU-aT-HJh"/>
                                                 <constraint firstItem="K9v-gh-JIH" firstAttribute="leading" secondItem="HRe-R1-fgw" secondAttribute="leading" constant="132" id="thc-Nb-ba3"/>
                                                 <constraint firstItem="1Vt-ES-QXf" firstAttribute="top" secondItem="J8N-o3-D4W" secondAttribute="bottom" constant="9" id="vAd-xl-yhl"/>
@@ -419,6 +423,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="n3Q-5A-6cT" id="XBr-xa-nTl"/>
+                                    <outlet property="delegate" destination="n3Q-5A-6cT" id="cHV-1T-xY1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -432,6 +440,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="APK-BD-dB4"/>
                     </view>
+                    <connections>
+                        <outlet property="registerTable" destination="eDG-XL-yxm" id="Jur-ce-Mg7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu7-KN-RUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -599,6 +610,9 @@
                                 <state key="normal" title="Join Us">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="n3Q-5A-6cT" kind="show" id="Gp5-Bk-Wbb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -619,9 +633,6 @@
                         <viewLayoutGuide key="safeArea" id="CdR-eN-IuD"/>
                     </view>
                     <navigationItem key="navigationItem" id="cpC-JQ-tFS"/>
-                    <connections>
-                        <segue destination="n3Q-5A-6cT" kind="show" id="etE-u0-vEw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCb-jH-MAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

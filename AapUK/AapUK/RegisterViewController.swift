@@ -8,24 +8,23 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,DetailTableViewCellActions {
     
     @IBOutlet weak var registerTable: UITableView!
     
 
     let passport = [PassportType.indian.rawValue,PassportType.nonIndian.rawValue]
     let userTypes = [UserType.supporter.rawValue,UserType.volunteer.rawValue]
-
+    
     let contribution =  ["Event","Video for social media","Call campaign","fund raise","Paper design"]
-    let contributionSet = Set<String>()
     var sectionTitles = ["User Type","User Details","Passport Type","How would you like to contribute ?"]
     
  
-    var users = User()
+    var user = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Register"
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +33,64 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitles[section]
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch section {
+        case 0: return userTypes.count
+        case 1: return 1
+        case 2: return passport.count
+        case 3: return contribution.count
+        default: return 0
+        }
+        
+    }
+    
+    let cellID = "cell"
+    let detailCellID = "detailsCell"
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0: return getCellForUserType(indexPath: indexPath)
+        case 1: return getCellUserDetails(indexPath: indexPath)
+        case 2: return getCellForPassport(indexPath: indexPath)
+        case 3: return getCellForContribution(indexPath: indexPath)
+        default: return tableView.dequeueReusableCell(withIdentifier: cellID)!
+        }
+    }
+    
+    func getCellForUserType(indexPath: IndexPath) -> UITableViewCell{
+        let cell = registerTable.dequeueReusableCell(withIdentifier: cellID)!
+        cell.textLabel?.text = userTypes[indexPath.row]
+        return cell
+    }
+    
+    func getCellUserDetails(indexPath: IndexPath) -> UITableViewCell{
+        let cell = registerTable.dequeueReusableCell(withIdentifier: detailCellID) as! DetailsTableViewCell
+        cell.delegate = self
+        return cell
+    }
+    
+    func getCellForPassport(indexPath: IndexPath) -> UITableViewCell{
+        let cell = registerTable.dequeueReusableCell(withIdentifier: cellID)!
+        cell.textLabel?.text = passport[indexPath.row]
+        return cell
+    }
 
+    func getCellForContribution(indexPath: IndexPath) -> UITableViewCell{
+        let cell = registerTable.dequeueReusableCell(withIdentifier: cellID)!
+        cell.textLabel?.text = contribution[indexPath.row]
+        return cell
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -45,7 +101,16 @@ class RegisterViewController: UIViewController {
     }
     */
     
-    @IBAction func fegisterClicked(_ sender: UIButton){
+    //MARK: Deatils tableview cell deleagte
+    
+    func detailsCell(didPressDoneWithName name: String?, address: String?, email: String?, phone: String?) {
+        user.name = name
+        user.address = address
+        user.email = email
+        user.phone = phone
+    }
+    
+    @IBAction func registerClicked(_ sender: UIButton){
         
         
     }
