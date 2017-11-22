@@ -14,9 +14,7 @@ class CurvedButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = 5.0
-        layer.borderWidth = 1.0
     }
     
     

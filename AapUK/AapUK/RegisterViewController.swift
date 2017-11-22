@@ -142,7 +142,6 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
             }
         }else{
             user.contribution.append(contributionText)
-            //user.contribution.insert(contributionText)
         }
         registerTable.reloadSections([3], with: .fade)
     }
@@ -170,10 +169,25 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
     
     @IBAction func registerClicked(_ sender: UIButton){
         
-        user.addToFireStore { (error) -> Void in
-            
+        user.addToFireStore {[weak self] (error) -> Void in
+            if let error = error{
+                self?.showAlert(withMessage: error.localizedDescription)
+            }else{
+                self?.showAlert(withMessage: "Successfully registered")
+                self?.navigationController?.popViewController(animated: true)
+            }
         }
         
+    }
+    
+    func showAlert(withMessage message: String){
+        
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
         
     }
 

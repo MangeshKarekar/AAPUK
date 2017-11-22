@@ -18,6 +18,19 @@ public enum UserType: String{
     case volunteer = "volunteer"
 }
 
+public enum RegistrationError: Error{
+    
+    case userExists
+    case noName
+    case noAddress
+    case noEmail
+    case noPhone
+    case noPassport
+    case noContribution
+    case noUserType
+    
+}
+
 
 class User{
     var name: String?
@@ -27,38 +40,80 @@ class User{
     var userType: String?
     var passport: String?
     var contribution = [String]()
-   // var contribution = Set<String>()
     
     private let userCollection = "users"
-    private let defaultStore = Firestore.firestore()
     
     func addToFireStore(completion:@escaping (_ error: Error?)->Void){
         
         
+        guard let name = name else{
+            completion(RegistrationError.noName)
+            return
+        }
+        
+        guard let address = address else{
+            completion(RegistrationError.noAddress)
+            return
+        }
+        
+        guard let userType = userType else{
+            completion(RegistrationError.noUserType)
+            return
+        }
+        
+        guard let phone = phone else{
+            completion(RegistrationError.noPhone)
+            return
+        }
+        
+        guard let email = email else{
+            completion(RegistrationError.noEmail)
+            return
+        }
+        
+        guard let passport = passport else{
+            completion(RegistrationError.noPassport)
+            return
+        }
+        
+        if (userType == UserType.volunteer.rawValue && contribution.count == 0){
+            completion(RegistrationError.noContribution)
+            return
+        }
+        
         let documentToAdd: [String: Any] = [
-            "name" : name as! String,
-            "address" : address as! String,
-            "userType" : userType as! String,
-            "phone" : phone as! String,
-            "email" : email as! String,
-            "passport" : passport as! String,
+            "name" : name as String,
+            "address" : address as String,
+            "userType" : userType as String,
+            "phone" : phone as String,
+            "email" : email as String,
+            "passport" : passport as String,
             "contribution" : contribution
         ]
         
-//        let documentToAdd: [String: Any] = [
-//            "name" : name as Any,
-//            "address" : address as Any,
-//            "userType" : userType as Any,
-//            "phone" : phone as Any,
-//            "email" : email as Any,
-//            "passport" : passport as Any,
-//            "contribution" : contribution as Any
-//
-//        ]
+        let defaultStore = Firestore.firestore()
         
-        defaultStore.collection(userCollection).addDocument(data: documentToAdd) {(error) in
-            completion(error)
+        defaultStore.collection(userCollection).getDocuments {[weak self] (querySnapShot, error) in
+            if  let documents = querySnapShot?.documents{
+                for document in documents{
+                    if (email == document.data()["email"] as? String){
+                        completion(RegistrationError.userExists)
+                        return
+                    }
+                }
+            }
+            
+            self?.save(documentToAdd, inStore: defaultStore, completion: completion)
         }
         
+
     }
+    
+    private func save(_ document: [String: Any], inStore store: Firestore,completion:@escaping (_ error: Error?)->Void){
+        
+        store.collection(userCollection).addDocument(data: document) { (error) in
+            completion(error)
+        }
+    }
+    
 }
