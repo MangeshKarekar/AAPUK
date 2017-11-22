@@ -141,7 +141,8 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
                 user.contribution.remove(at: indexToRemove)
             }
         }else{
-            user.contribution.insert(contributionText)
+            user.contribution.append(contributionText)
+            //user.contribution.insert(contributionText)
         }
         registerTable.reloadSections([3], with: .fade)
     }
@@ -168,6 +169,10 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     @IBAction func registerClicked(_ sender: UIButton){
+        
+        user.addToFireStore { (error) -> Void in
+            
+        }
         
         
     }
