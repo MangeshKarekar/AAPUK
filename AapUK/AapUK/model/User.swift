@@ -20,11 +20,11 @@ public enum UserType: String{
 
 
 struct User{
-    var name = ""
-    var address = ""
-    var email = ""
-    var phone = ""
-    var userType = ""
-    var passport: PassportType
+    var name: String?
+    var address: String?
+    var email: String?
+    var phone: String?
+    var userType: String?
+    var passport: String?
     var contribution = Set<String>()
 }

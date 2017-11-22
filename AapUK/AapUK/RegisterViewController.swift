@@ -9,8 +9,10 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var registerTable: UITableView!
+    
 
-    let addresses = ["Name","Address","Email","Phone"]
     let passport = [PassportType.indian.rawValue,PassportType.nonIndian.rawValue]
     let userTypes = [UserType.supporter.rawValue,UserType.volunteer.rawValue]
 
@@ -18,7 +20,8 @@ class RegisterViewController: UIViewController {
     let contributionSet = Set<String>()
     var sectionTitles = ["User Type","User Details","Passport Type","How would you like to contribute ?"]
     
-    var selectedUserType = UserType.volunteer.rawValue
+ 
+    var users = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,5 +44,10 @@ class RegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func fegisterClicked(_ sender: UIButton){
+        
+        
+    }
 
 }
