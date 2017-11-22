@@ -38,6 +38,11 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
+        if (user.userType == UserType.supporter.rawValue || user.userType == nil){
+            return sectionTitles.count - 1
+        }
+        
         return sectionTitles.count
     }
     
@@ -121,7 +126,7 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
     
     func didSelectForUserType(indexPath: IndexPath){
         user.userType = userTypes[indexPath.row]
-        registerTable.reloadSections([0], with: .fade)
+        registerTable.reloadData()
     }
     
     func didSelectForPassport(indexPath: IndexPath){
