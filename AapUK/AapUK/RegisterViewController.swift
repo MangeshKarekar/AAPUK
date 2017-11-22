@@ -68,7 +68,13 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
     
     func getCellForUserType(indexPath: IndexPath) -> UITableViewCell{
         let cell = registerTable.dequeueReusableCell(withIdentifier: cellID)!
-        cell.textLabel?.text = userTypes[indexPath.row]
+        let usertypeText = userTypes[indexPath.row]
+        cell.textLabel?.text = usertypeText
+        if usertypeText == user.userType{
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        }else{
+            cell.accessoryType = UITableViewCellAccessoryType.none
+        }
         return cell
     }
     
@@ -80,15 +86,61 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
     
     func getCellForPassport(indexPath: IndexPath) -> UITableViewCell{
         let cell = registerTable.dequeueReusableCell(withIdentifier: cellID)!
-        cell.textLabel?.text = passport[indexPath.row]
+        let passportText = passport[indexPath.row]
+        cell.textLabel?.text = passportText
+        if passportText == user.passport{
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        }else{
+            cell.accessoryType = UITableViewCellAccessoryType.none
+        }
+        
         return cell
     }
 
     func getCellForContribution(indexPath: IndexPath) -> UITableViewCell{
         let cell = registerTable.dequeueReusableCell(withIdentifier: cellID)!
-        cell.textLabel?.text = contribution[indexPath.row]
+        let contributionText = contribution[indexPath.row]
+        cell.textLabel?.text = contributionText
+        if user.contribution.contains(contributionText){
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        }else{
+            cell.accessoryType = UITableViewCellAccessoryType.none
+        }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0: didSelectForUserType(indexPath: indexPath)
+        case 1: break
+        case 2: didSelectForPassport(indexPath: indexPath)
+        case 3: didSelectForContribution(indexPath: indexPath)
+        default: break
+        }
+    }
+    
+    func didSelectForUserType(indexPath: IndexPath){
+        user.userType = userTypes[indexPath.row]
+        registerTable.reloadSections([0], with: .fade)
+    }
+    
+    func didSelectForPassport(indexPath: IndexPath){
+        user.passport = passport[indexPath.row]
+        registerTable.reloadSections([2], with: .fade)
+    }
+    
+    func didSelectForContribution(indexPath: IndexPath){
+        let contributionText = contribution[indexPath.row]
+        if user.contribution.contains(contributionText){
+            if let indexToRemove = user.contribution.index(of: contributionText){
+                user.contribution.remove(at: indexToRemove)
+            }
+        }else{
+            user.contribution.insert(contributionText)
+        }
+        registerTable.reloadSections([3], with: .fade)
+    }
+    
     
     
     /*
