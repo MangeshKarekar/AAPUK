@@ -7,9 +7,14 @@
 //
 
 import UIKit
-
-class AboutViewController: UIViewController {
-
+import SafariServices
+class AboutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    @IBOutlet weak var aboutTable: UITableView!
+    let aboutRows = [0:"Facebook",1:"Web"]
+    
+    let links = ["http://www.facebook.com/AAPUnitedKingdom",
+                 "http://www.aapuk.org/"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +36,32 @@ class AboutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return aboutRows.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.text = aboutRows[indexPath.section]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openLinkInSafari(links[indexPath.section])
+    }
 
+    func openLinkInSafari(_ urlString: String){
+        
+        guard let url = URL(string: urlString) else{
+            return
+        }
+        
+        let safariView = SFSafariViewController(url: url)
+        self.present(safariView, animated: true, completion: nil)
+    }
 }

@@ -10,9 +10,17 @@ import UIKit
 
 class JoinUsPopViewController: UIViewController {
 
+    @IBOutlet weak var laterButton: UIButton!
+
+    var showLater = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        if showLater{
+//            laterButton.isHidden = true
+//        }else{
+//            laterButton.isHidden = false
+//        }
         // Do any additional setup after loading the view.
     }
 

@@ -633,6 +633,9 @@
                         <viewLayoutGuide key="safeArea" id="CdR-eN-IuD"/>
                     </view>
                     <navigationItem key="navigationItem" id="cpC-JQ-tFS"/>
+                    <connections>
+                        <outlet property="laterButton" destination="zUw-Oq-8nG" id="PvX-X4-9Xm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCb-jH-MAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -739,14 +742,56 @@
                     <view key="view" contentMode="scaleToFill" id="DaS-9v-AQ5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cBS-TW-JGI">
+                                <rect key="frame" x="0.0" y="7.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="India-Flag-PNG-File" id="rZJ-mp-Rcd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="disclosureIndicator" textLabel="eVE-H7-3jT" style="IBUITableViewCellStyleDefault" id="DgL-iO-wzX">
+                                        <rect key="frame" x="0.0" y="216.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DgL-iO-wzX" id="BSF-Be-TWv">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eVE-H7-3jT">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xt2-Qb-7xi" id="Dkl-9Z-xkn"/>
+                                    <outlet property="delegate" destination="xt2-Qb-7xi" id="yAE-gS-dm8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cBS-TW-JGI" firstAttribute="height" secondItem="DaS-9v-AQ5" secondAttribute="height" id="PqD-5M-dMK"/>
+                            <constraint firstItem="cBS-TW-JGI" firstAttribute="centerX" secondItem="Udu-aY-hzv" secondAttribute="centerX" id="Xah-er-igy"/>
+                            <constraint firstItem="cBS-TW-JGI" firstAttribute="centerY" secondItem="Udu-aY-hzv" secondAttribute="centerY" id="g9i-Sk-5C6"/>
+                            <constraint firstItem="cBS-TW-JGI" firstAttribute="width" secondItem="DaS-9v-AQ5" secondAttribute="width" id="r4T-Bv-GVs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Udu-aY-hzv"/>
                     </view>
                     <navigationItem key="navigationItem" id="mWq-G6-2TY"/>
+                    <connections>
+                        <outlet property="aboutTable" destination="cBS-TW-JGI" id="nh1-bK-cYG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSW-sd-FaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="376.80000000000001" y="2368.9655172413795"/>
+            <point key="canvasLocation" x="588" y="2361.7691154422791"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="QNq-hE-z5B">
@@ -957,7 +1002,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHd-KE-CtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38.399999999999999" y="2368.5157421289359"/>
+            <point key="canvasLocation" x="-303" y="2362"/>
         </scene>
         <!--Join us-->
         <scene sceneID="pY5-Q2-Kwp">
