@@ -33,8 +33,8 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         if let _ = UserDefaults.standard.value(forKey: firstTimeBootKey) as? Bool{
         }else{
-            UserDefaults.standard.set(true, forKey: firstTimeBootKey)
             self.performSegue(withIdentifier: joinUsSegue, sender: nil)
+
         }
         
     }
@@ -72,11 +72,6 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == joinUsSegue{
-//            let destinationViewController = segue.destination as! UINavigationController
-//            destinationViewController.showLater = true
-        }
         
         if segue.identifier == newsdetailsSegue{
             let destinationViewController = segue.destination as! NewsDetailsViewController

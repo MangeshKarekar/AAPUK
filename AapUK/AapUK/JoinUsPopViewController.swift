@@ -12,10 +12,19 @@ class JoinUsPopViewController: UIViewController {
 
     @IBOutlet weak var laterButton: UIButton!
 
-    var showLater = false
+    let firstTimeBootKey = "firstTimeBootKey"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let _ = UserDefaults.standard.value(forKey: firstTimeBootKey) as? Bool{
+            laterButton.isHidden = true
+        }else{
+            UserDefaults.standard.set(true, forKey: firstTimeBootKey)
+            laterButton.isHidden = false
+        }
+        
+        
 //        if showLater{
 //            laterButton.isHidden = true
 //        }else{
