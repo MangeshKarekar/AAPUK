@@ -8,10 +8,14 @@
 
 import UIKit
 
+protocol RegisterViewControllerDelegate {
+    func registerViewControllerUserDidRegister()
+}
+
 class RegisterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,DetailTableViewCellActions {
     
     @IBOutlet weak var registerTable: UITableView!
-    
+    var delegate: RegisterViewControllerDelegate?
 
     let passport = [PassportType.indian.rawValue,PassportType.nonIndian.rawValue]
     let userTypes = [UserType.supporter.rawValue,UserType.volunteer.rawValue]
@@ -173,7 +177,7 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
             if let error = error{
                 self?.showAlert(withMessage: error.localizedDescription)
             }else{
-                self?.showAlert(withMessage: "Successfully registered")
+                self?.delegate?.registerViewControllerUserDidRegister()
                 self?.navigationController?.popViewController(animated: true)
             }
         }

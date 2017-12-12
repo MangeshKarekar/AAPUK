@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nA-KC-eVN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nA-KC-eVN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -611,7 +611,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="n3Q-5A-6cT" kind="show" id="Gp5-Bk-Wbb"/>
+                                    <action selector="registerTapped:" destination="tep-u5-mah" eventType="touchUpInside" id="zCZ-aX-mtH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -635,6 +635,7 @@
                     <navigationItem key="navigationItem" id="cpC-JQ-tFS"/>
                     <connections>
                         <outlet property="laterButton" destination="zUw-Oq-8nG" id="PvX-X4-9Xm"/>
+                        <segue destination="n3Q-5A-6cT" kind="show" identifier="registerSegue" id="dQX-w7-Clm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCb-jH-MAb" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class JoinUsPopViewController: UIViewController {
+class JoinUsPopViewController: UIViewController,RegisterViewControllerDelegate {
 
     @IBOutlet weak var laterButton: UIButton!
-
+    
     let firstTimeBootKey = "firstTimeBootKey"
-
+    let registerSegue = "registerSegue"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +25,6 @@ class JoinUsPopViewController: UIViewController {
         }
         
         
-//        if showLater{
-//            laterButton.isHidden = true
-//        }else{
-//            laterButton.isHidden = false
-//        }
         // Do any additional setup after loading the view.
     }
 
@@ -39,20 +34,34 @@ class JoinUsPopViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == registerSegue{
+            let registerViewController = segue.destination as! RegisterViewController
+            registerViewController.delegate = self
+        }
     }
-    */
+    
+    
+    @IBAction func registerTapped(_ sender: UIButton){
+        self.performSegue(withIdentifier: registerSegue, sender: nil)
+    }
+
     
     @IBAction func doItLaterTapped(_ sender: UIButton){
-        
         self.dismiss(animated: true, completion: nil)
     
     }
-
+    
+    //MARK: RegisterViewController delegate
+    
+    func registerViewControllerUserDidRegister() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
