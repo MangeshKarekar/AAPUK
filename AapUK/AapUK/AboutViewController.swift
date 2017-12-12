@@ -8,12 +8,22 @@
 
 import UIKit
 import SafariServices
+
+
 class AboutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var aboutTable: UITableView!
-    let aboutRows = [0:"Facebook",1:"Web"]
+    let aboutRows = [0:"Web",1:"Facebook",2:"Twitter",3:"Youtube",4:"Instagram",5:"Donate"]
     
-    let links = ["http://www.facebook.com/AAPUnitedKingdom",
-                 "http://www.aapuk.org/"]
+    let links = ["http://www.aapuk.org/","http://www.facebook.com/AAPUnitedKingdom"
+                ,"https://twitter.com/AAP__UK","https://www.youtube.com/channel/UCBShErHTX34qR0StriL4eUA",
+                 "https://www.instagram.com/aapunitedkingdom/","https://donate.aamaadmiparty.org/"]
+    
+    let images = ["AAP-logo-Eng",
+                  "facebook",
+                  "twitter",
+                  "youtube",
+                  "instagram",
+                  "donate"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +58,7 @@ class AboutViewController: UIViewController,UITableViewDataSource,UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.textLabel?.text = aboutRows[indexPath.section]
+        cell.imageView?.image = UIImage(named: images[indexPath.section])
         return cell
     }
     
